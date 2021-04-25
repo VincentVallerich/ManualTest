@@ -1,4 +1,4 @@
-import fr.vv.mantest.domain.TestState;
+import fr.vv.mantest.domain.State;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -26,19 +26,19 @@ public class TestTest {
 
     @Test
     void aTestShouldBeSUCCESSByDefault() {
-        assertEquals(TestState.UNPASSED, sut.getState());
+        assertEquals(State.UNPASSED, sut.getState());
     }
 
     @Test
     void shouldStateBecomeSUCCESSWhenTestSuccess() {
         sut.success();
-        assertEquals(TestState.SUCCESS, sut.getState());
+        assertEquals(State.SUCCESS, sut.getState());
     }
 
     @Test
     void shouldStateBecomeFAILUREWhenTestSuccess() {
         sut.fail();
-        assertEquals(TestState.FAILURE, sut.getState());
+        assertEquals(State.FAILURE, sut.getState());
     }
 
     @Test

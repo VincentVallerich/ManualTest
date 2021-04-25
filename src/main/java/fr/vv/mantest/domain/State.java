@@ -1,6 +1,6 @@
 package fr.vv.mantest.domain;
 
-public enum TestState {
+public enum State {
     UNPASSED,
     SUCCESS,
     FAILURE
